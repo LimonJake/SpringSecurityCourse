@@ -60,10 +60,10 @@ public class ProjectSecurityConfig {
 
 
     // No we will work with jdbc auth using postgresql
-    @Bean
-    public UserDetailsService userDetailsService(DataSource dataSource){
-        return new JdbcUserDetailsManager(dataSource);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(DataSource dataSource){
+//        return new JdbcUserDetailsManager(dataSource);
+//    }
 
 //    @Bean
 //    public UserDetailsService users(DataSource dataSource) {
@@ -83,9 +83,9 @@ public class ProjectSecurityConfig {
 //        return users;
 //    }
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder(){
-//        return NoOpPasswordEncoder.getInstance();
-//    }
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return NoOpPasswordEncoder.getInstance();
+    }
 
 }
